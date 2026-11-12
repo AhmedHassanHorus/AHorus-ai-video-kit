@@ -1,0 +1,17 @@
+# constraints.txt — pins for a shared environment.
+#
+# Use it on every install so a new package can never move a version that already works:
+#
+#     pip install -c constraints.txt <package>
+#     uv pip install --python <venv>/Scripts/python.exe -c constraints.txt <package>
+#
+# The values below are a known-good set from a Windows machine with a 4 GB laptop GPU
+# (see requirements-freeze.txt for the full frozen list). They are a starting point,
+# not a law: match the CUDA build to the user's driver, and never change a pin that is
+# already working without telling the user — that is exactly the change that breaks
+# a machine that was fine yesterday (AGENTS.md §3.4).
+
+torch==2.6.0+cu124
+torchaudio==2.6.0+cu124
+numpy==2.4.6
+einops==0.8.2

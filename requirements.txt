@@ -1,0 +1,32 @@
+# Python side of the pipeline.
+#
+# IMPORTANT: this file is a *request list*, not a green light. Installing it downloads
+# several GB (torch + CUDA wheels + whisper weights). Get the user's explicit approval
+# first — see AGENTS.md §0. Then install with the constraints file:
+#
+#     pip install -r requirements.txt -c constraints.txt
+#
+# Nothing here is required by every pipeline. A silent-video pipeline needs only ffmpeg.
+# Comment out what you do not need; the fewer packages, the fewer ways to break the env.
+
+# --- transcription (word timestamps: the backbone of caption timing) ---
+faster-whisper==1.2.1
+
+# --- fallback TTS: free, online, no GPU ---
+edge-tts==7.3.1
+
+# --- numeric / audio helpers used by the scripts in scripts/ ---
+numpy==2.4.6
+
+# --- local GPU TTS (Egyptian Arabic). Uncomment only with approval. ---
+# See .agents/skills/arabic-tts §2 for the exact install order — installing these naively
+# pulls a training stack you do not need, and upgrades transformers.
+# voicetut-tts
+# transformers>=5.3.0
+# accelerate
+# pydub
+# librosa
+
+# --- CUDA torch: pick the build that matches the user's driver. ---
+# torch==2.6.0+cu124
+# torchaudio==2.6.0+cu124

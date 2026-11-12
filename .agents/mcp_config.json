@@ -1,0 +1,17 @@
+{
+  "_comment": "TEMPLATE — copy into your agent's MCP config and edit the paths. Do not commit a filled-in copy (see .gitignore).",
+  "mcpServers": {
+    "filmcraft": {
+      "command": "<install-dir>/filmcraft-cli.exe",
+      "args": ["mcp"]
+    },
+    "effectcraft": {
+      "command": "<install-dir>/effectcraft-cli.exe",
+      "args": ["mcp"]
+    },
+    "soundcraft": {
+      "command": "<install-dir>/soundcraft-cli.exe",
+      "args": ["mcp"]
+    }
+  }
+}

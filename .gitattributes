@@ -1,0 +1,10 @@
+# Normalise line endings so the kit behaves the same on Windows, macOS and Linux.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+*.mov binary
+*.wav binary
+*.mp3 binary

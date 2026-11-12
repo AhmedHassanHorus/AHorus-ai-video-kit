@@ -1,0 +1,87 @@
+# ---- media (never commit: this repo is code + knowledge) ----
+*.mp4
+*.mov
+*.mxf
+*.mkv
+*.webm
+*.avi
+*.wav
+*.mp3
+*.aac
+*.flac
+*.m4a
+*.ogg
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.tif
+*.tiff
+*.exr
+*.psd
+*.aep
+!docs/**/*.png
+
+# ---- editing / compositing projects ----
+*.fcproj
+*.ecproj
+*.prproj
+*.drp
+*.kdenlive
+*.mlt
+*.aep
+*.veg
+*.blend
+*.rpp
+*.scraft
+
+# ---- model weights & caches ----
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.onnx
+*.gguf
+models/
+.cache/
+.cache*/**
+
+# ---- python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- node / remotion ----
+node_modules/
+dist/
+out/
+.remotion/
+
+# ---- local, machine-specific notes (see AGENTS.md §1 step 5) ----
+docs/LOCAL-SETUP.md
+
+# ---- secrets / tokens / filled-in configs ----
+.env
+.env.*
+*.token
+*_token.txt
+opencode.jsonc
+.agents/mcp_config.local.json
+
+# ---- build artefacts ----
+build/
+tmp/
+*.log
+ffmpeg_*.log
+
+# ---- OS noise ----
+.DS_Store
+Thumbs.db
+desktop.ini
